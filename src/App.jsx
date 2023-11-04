@@ -73,7 +73,7 @@ export default function Calendar() {
             ) : undefined}
           </div>
         </div>
-        <div className="flex justify-center items-center gap-4 p-3">
+        <div className="flex justify-center items-start gap-4 p-3">
           {[currentMonthNo, getSecondCalenderMonth()]?.map((month, i) => (
             <div key={i}>
               <WeekName />
