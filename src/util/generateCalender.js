@@ -1,18 +1,7 @@
-export function generateCalender(currentDate, month, year) {
-  const currentYear = currentDate.getFullYear();
-  const currentMonth = currentDate.getMonth();
-  const daysInPreviousMonth = new Date(currentYear, currentMonth, 0).getDate();
-  const daysInCurrentMonth = new Date(
-    currentYear,
-    currentMonth + 1,
-    0
-  ).getDate();
-
-  const firstDayOfCurrentMonth = new Date(
-    currentYear,
-    currentMonth,
-    1
-  ).getDay();
+export function generateCalender(month, year) {
+  const daysInPreviousMonth = new Date(year, month, 0).getDate();
+  const daysInCurrentMonth = new Date(year, month + 1, 0).getDate();
+  const firstDayOfCurrentMonth = new Date(year, month, 1).getDay();
 
   const calendarArray = [];
 

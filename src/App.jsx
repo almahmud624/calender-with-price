@@ -34,8 +34,6 @@ export default function Calendar() {
     return secondCalenderMonth;
   };
 
-  console.log(currentMonthNo);
-
   return (
     <div className="flex gap-10 justify-center mx-auto h-screen items-center sm:flex-row flex-col ">
       <div className="shadow">
@@ -80,7 +78,7 @@ export default function Calendar() {
             <div key={i}>
               <WeekName />
               <div className="grid grid-cols-7 ">
-                {generateCalender(currentDate, month, currentYear).map(
+                {generateCalender(month, currentYear).map(
                   (calenderInfo, index) => (
                     <Calender
                       key={index}
